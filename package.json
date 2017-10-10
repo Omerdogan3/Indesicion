@@ -1,0 +1,23 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omerdogan3/Indesicion.git"
+  },
+  "author": "Omer Dogan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Omerdogan3/Indesicion/issues"
+  },
+  "homepage": "https://github.com/Omerdogan3/Indesicion#readme",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
+}
