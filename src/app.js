@@ -1,3 +1,8 @@
+/*commands:
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+live-server public
+*/
+
 console.log('App.js is running');
 
 // JSX - Javascript XML
