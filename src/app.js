@@ -4,14 +4,14 @@ live-server public
 */
 console.log('App.js is running');
 
-var app = {
+const app = {
 	title: 'Indecision App',
 	subtitle: 'Put your life in the hands of a computer',
 	options: ['One','Two']
 };
 
 // JSX - Javascript XML
-var template = (
+const template = (
 	<div>
 		<h1>{app.title}</h1>
 		{app.subtitle && <p>{app.subtitle}</p>}
@@ -22,7 +22,7 @@ var template = (
 		</ol>
 	</div>
 );  
-var user = {
+const user = {
 	name : "Omer",
 	age : 22,
 	loc : "Istanbul"
@@ -34,7 +34,7 @@ function getLocation(location){
 	}	
 }
 
-var template2 =(
+const template2 =(
 	<div>
 		<h1>{user.name ? user.name : 'Anonymous'}</h1>
 		<p>Age:{user.age}</p>
@@ -45,8 +45,8 @@ var template2 =(
 
 
 
-var appRoot = document.getElementById('app');
-var nameRoot = document.getElementById('name');
+const appRoot = document.getElementById('app');
+const nameRoot = document.getElementById('name');
 
 
 ReactDOM.render(template,appRoot);
