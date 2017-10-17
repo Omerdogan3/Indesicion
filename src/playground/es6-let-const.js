@@ -1,20 +1,9 @@
-var nameVar = 'Omer';
-var nameVar = 'Mike';
-console.log('nameVar', nameVar);
+const square = function(x){
+    return x*x;
+};
 
-let nameLet = 'Jen';
-nameLet = 'Julie';
-console.log('nameLet', nameLet);
+const squareArrow = (x) =>{
+    return x*x;
+};
 
-const nameConst = 'Frank';
-console.log('nameconst' , nameConst);
-//Block Level Scope
-
-
-
-function getPetName(){
-    const petName = 'Hal';
-    return petName;
-}
-
-getPetName();
+console.log(squareArrow(8));
