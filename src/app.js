@@ -7,21 +7,59 @@ console.log('App.js is running');
 const app = {
 	title: 'Indecision App',
 	subtitle: 'Put your life in the hands of a computer',
-	options: ['One','Two']
+	options: []
+};
+
+const onFormSubmit =(e) =>{
+	e.preventDefault(); //will stop pullpage refresh
+	const option = e.target.elements.option.value;
+	if(option){
+		app.options.push(option);
+		e.target.elements.option.value = '';
+		renderTestApp();
+	}
+};
+
+const removeAll = (e) =>{
+	e.preventDefault(); //will stop pullpage refresh
+	app.options.splice(0,app.options.length);
+	renderTestApp();
+}
+
+const onMakeDesicion = () => {
+	const randnum = Math.floor(Math.random() * app.options.length);
+	const option = app.options[randnum];
+	alert(option);
 };
 
 // JSX - Javascript XML
-const template = (
-	<div>
-		<h1>{app.title}</h1>
-		{app.subtitle && <p>{app.subtitle}</p>}
-		<p>{app.options.length >= 2 ? 'Here are your options' : 'No Options'}</p>
-		<ol>
-			<li>{app.options[0]}</li>
-			<li>{app.options[1]}</li>
-		</ol>
-	</div>
-);  
+const renderTestApp = () =>{
+	const template = (
+		<div>
+			<h1>{app.title}</h1>
+			{app.subtitle && <p>{app.subtitle}</p>}
+			<p>{app.options.length >= 2 ? 'Here are your options' : 'No Options'}</p>
+			<button disabled={app.options.length===0} onClick={onMakeDesicion}>What should I do for you?</button>
+			<ol>
+			{
+				app.options.map((option)=>{
+					return <li key={option}>{option}</li>;
+				})
+			}
+			</ol>
+			<form onSubmit={onFormSubmit}>
+				<input type="text" name="option"/>
+				<button>Add Option</button>
+			</form>
+			<button onClick={removeAll}>Remove All</button>
+			
+
+
+		</div>
+	);
+	ReactDOM.render(template,appRoot);
+};
+
 const user = {
 	name : "Omer",
 	age : 22,
@@ -42,44 +80,6 @@ const template2 =(
 	</div>
 );
 
-let count = 0;
-const someId = 'myIdHere';
-
-const addOne = () =>{
-	count++;
-	renderCounterApp();
-};
-
-const subOne = () =>{
-	count--;
-	renderCounterApp();
-};
-
-const resetButton = () =>{
-	count=0;
-	renderCounterApp();
-};
-
-
-
-
 const appRoot = document.getElementById('app');
-const nameRoot = document.getElementById('name');
-
-
 //ReactDOM.render(template,appRoot);
-//ReactDOM.render(template2,nameRoot);
-
-const renderCounterApp =() =>{
-	const templateTwo = (
-		<div>
-			<h1> Count: {count}</h1>
-			<button id={someId} className="button" onClick={addOne}>+1</button>
-			<button id={someId} className="button" onClick={subOne}>-1</button>
-			<button id={someId} className="button" onClick={resetButton}>reset</button>
-		</div>
-	);
-	ReactDOM.render(templateTwo,nameRoot);
-};
-
-renderCounterApp();
+renderTestApp();
