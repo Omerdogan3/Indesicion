@@ -140,44 +140,15 @@ import IndecisionApp from './components/IndecisionApp.js';
 
 ReactDOM.render(<IndecisionApp/>,document.getElementById('app'));
 
-class OldSyntax{
-    constructor(){
-        this.name = 'Mike';
-    }
-    getGreeting(){
-        return "Hi my name is $(this.name)";
-    }
-}
-const oldSyntax = new OldSyntax();
-console.log(oldSyntax);
+// const oldSyntax = new OldSyntax();
+// console.log(oldSyntax);
 
-class NewSyntax{
-    name = 'OD';
-    getGreeting = () =>{
-        return "Hi my name is $(this.name)"; 
-    }
-}
-
-const newSyntax = new NewSyntax();
-const newGetGreeting = new newSyntax.getGreeting;
-console.log(newSyntax);
-console.log(newGetGreeting);class OldSyntax{
-    constructor(){
-        this.name = 'Mike';
-    }
-    getGreeting(){
-        return "Hi my name is $(this.name)";
-    }
-}
-const oldSyntax = new OldSyntax();
-console.log(oldSyntax);
-
-class NewSyntax{
-    name = 'OD';
-    getGreeting = () =>{
-        return "Hi my name is $(this.name)"; 
-    }
-}
+// class NewSyntax{
+//     name = 'OD';
+//     getGreeting = () =>{
+//         return "Hi my name is $(this.name)"; 
+//     }
+// }
 
 // const newSyntax = new NewSyntax();
 // const newGetGreeting = new newSyntax.getGreeting;
