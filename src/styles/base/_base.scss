@@ -12,3 +12,10 @@ h1{
     font-size:$l-size;
 }
 
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
