@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Omerdogan3/Indesicion/issues"
   },
-  "homepage": "https://github.com/Omerdogan3/Indesicion",
+  "homepage": "https://omerdogan3.github.io/Omerdogan3/Indesicion",
   "dependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
