@@ -7,7 +7,7 @@
     "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "deploy" : "npm run build&&gh-pages -d build"
+    "deploy" : "yarn run dev-server"
   },
   "repository": {
     "type": "git",
