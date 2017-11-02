@@ -7,7 +7,8 @@
     "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "deploy": "npm run build&&gh-pages -d build"
+    "predeploy": "npm run dev-server",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "gh-pages": "^1.0.0",
     "live-server": "^1.2.0",
     "node-sass": "^4.5.3",
     "normalize.css": "7.0.0",
