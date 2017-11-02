@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Omerdogan3/Indesicion/issues"
   },
-  "homepage": "https://github.com/Omerdogan3/Indesicion#readme",
+  "homepage": "https://github.com/Omerdogan3/Indesicion",
   "dependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
@@ -37,5 +38,8 @@
     "validator": "8.0.0",
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
