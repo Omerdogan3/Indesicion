@@ -16,6 +16,9 @@
 // import validator from 'validator';
 // console.log(validator.isEmail('omerdogan3@gmail.com'));
 
+
+//HEYYO
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import IndecisionApp from './components/IndecisionApp.js';
